@@ -42,12 +42,25 @@ function App() {
             <Card.Img variant="top" src={userDetails?.image} />
             <Card.Body>
               <Card.Title>
+                <div className="row">
+                  <div className="col-lg-6">
                 <h5>{userDetails?.firstName}  {userDetails?.lastName}</h5>
                 <p>{userDetails?.gender}</p>
                 <h6>Birth Date :</h6><p>{userDetails?.birthDate}</p>
                 <h6>Age :</h6><p>{userDetails?.age}</p>
                 <h6>Weight :</h6><p>{userDetails?.weight}</p>
                 <h6>Height :</h6><p>{userDetails?.height}</p>
+                  </div>
+                  <div className="col-lg-6">
+                  <h6>Address:</h6><p>{userDetails?.address?.address}</p>
+                  <h6>Phone:</h6><h5>{userDetails?.phone}</h5>
+                  <h6>Company:</h6> <h5>{userDetails?.company?.address?.address}</h5>
+                  <h6>Email:</h6> <h5>{userDetails?.email}</h5>
+
+
+                  </div>
+                </div>
+               
               </Card.Title>
               <Card.Text>
 
